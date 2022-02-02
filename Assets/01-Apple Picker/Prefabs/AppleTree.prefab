@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4442801249767745614}
   - component: {fileID: 4442801249767745613}
   - component: {fileID: 4442801249767745612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4442801249797466433}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AppleTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 4442801249851081013}
   - component: {fileID: 4442801249851081012}
   - component: {fileID: 4442801249851080971}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
