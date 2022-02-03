@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Basket : MonoBehaviour
 {
-    public Text           scoreGT; 
+    public Text scoreGT; 
 
 
     void Start() {
@@ -40,17 +40,22 @@ public class Basket : MonoBehaviour
         GameObject collidedWith = coll.gameObject; // 3
 
         if ( collidedWith.tag == "Apple" ) { // 4
-        Destroy( collidedWith );
+            Destroy( collidedWith );
 
 
-        // Parse the text of the scoreGT 
-        int score = int.Parse( scoreGT.text);
+            // Parse the text of the scoreGT 
+            int score = int.Parse( scoreGT.text);
 
-        // Add points for catching the apple
-        score += 100;
+            // Add points for catching the apple
+            score += 100;
 
-        // Convert the score back to a string
-        scoreGT.text = score.ToString();
+            // Convert the score back to a string
+            scoreGT.text = score.ToString();
+
+            // Track the high score
+            if (score > HighScore.score) {
+                HighScore.score = score;
+            }
+        }
     }
-}
 }
