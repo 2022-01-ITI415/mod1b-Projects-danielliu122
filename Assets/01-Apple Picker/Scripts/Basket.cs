@@ -1,9 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Basket : MonoBehaviour
 {
+    public Text           scoreGT; 
+
+
+    void Start() {
+        // Find a reference to the ScoreCounter
+        GameObject scoreGO = GameObject.Find("ScoreCounter");
+        // Get the Text Component of that GameO
+        scoreGT = scoreGO.GetComponent<Text>();
+        // Set the starting number of points to
+        scoreGT.text = "0";
+    }
+
     void Update () {
         // Get the current screen position of the mouse from Input
         Vector3 mousePos2D = Input.mousePosition; // 1
@@ -28,6 +41,16 @@ public class Basket : MonoBehaviour
 
         if ( collidedWith.tag == "Apple" ) { // 4
         Destroy( collidedWith );
+
+
+        // Parse the text of the scoreGT 
+        int score = int.Parse( scoreGT.text);
+
+        // Add points for catching the apple
+        score += 100;
+
+        // Convert the score back to a string
+        scoreGT.text = score.ToString();
     }
 }
 }
