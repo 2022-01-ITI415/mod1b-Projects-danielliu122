@@ -13,6 +13,7 @@ public class Basket : MonoBehaviour
         GameObject scoreGO = GameObject.Find("ScoreCounter");
         // Get the Text Component of that GameO
         scoreGT = scoreGO.GetComponent<Text>();
+
         // Set the starting number of points to
         scoreGT.text = "0";
     }
@@ -41,6 +42,7 @@ public class Basket : MonoBehaviour
 
         if ( collidedWith.tag == "Apple" ) { // 4
             Destroy( collidedWith );
+            Debug.Log("Collided with apple");
 
 
             // Parse the text of the scoreGT 
@@ -52,8 +54,11 @@ public class Basket : MonoBehaviour
             // Convert the score back to a string
             scoreGT.text = score.ToString();
 
+            Debug.Log("Highscore test "+ HighScore.score);
+
             // Track the high score
             if (score > HighScore.score) {
+                Debug.Log("Detected new high score; setting new high score ");
                 HighScore.score = score;
             }
         }

@@ -43,6 +43,7 @@ public class ApplePicker : MonoBehaviour
         Debug.Log("tbasketGo destroyed");
         // Restart the game, which doesn't affect HighScore.Score
         if ( basketList.Count == 0 ) {
+            Debug.Log("Restart the game, apple picker, 0 baskets");
             SceneManager.LoadScene("Main-ApplePicker");
         }
     }
