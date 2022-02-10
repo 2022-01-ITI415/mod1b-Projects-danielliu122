@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 205859666}
+  - component: {fileID: 205859667}
   m_Layer: 0
   m_Name: LaunchPoint
   m_TagString: Untagged
@@ -153,6 +154,18 @@ Transform:
   m_Father: {fileID: 1235587315}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
+--- !u!122 &205859667
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205859665}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 1518370944
+  m_Size: 1
 --- !u!1 &218953314
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +425,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1076981208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2788938908799223873, guid: fc6d4d2acd4882b48b21d54370bc6458, type: 3}
+  m_PrefabInstance: {fileID: 8295705959511793171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1235587313
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1235587315}
   - component: {fileID: 1235587314}
+  - component: {fileID: 1235587316}
   m_Layer: 0
   m_Name: Slingshot
   m_TagString: Untagged
@@ -460,6 +479,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
+--- !u!114 &1235587316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235587313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c57b711726effa4dbf5667b15d97187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabProjectile: {fileID: 1076981208}
+  velocityMult: 10
+  _____________________________: 0
+  launchPoint: {fileID: 0}
+  launchPos: {x: 0, y: 0, z: 0}
+  projectile: {fileID: 0}
+  aimingMode: 0
 --- !u!1 &1375117354
 GameObject:
   m_ObjectHideFlags: 0
