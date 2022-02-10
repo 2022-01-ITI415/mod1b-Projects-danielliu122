@@ -123,6 +123,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &92683363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2788938908799223873, guid: fc6d4d2acd4882b48b21d54370bc6458, type: 3}
+  m_PrefabInstance: {fileID: 1741882765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &92683368 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5657362278649358858, guid: fc6d4d2acd4882b48b21d54370bc6458, type: 3}
+  m_PrefabInstance: {fileID: 1741882765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &205859665
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,8 +346,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645482555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 1}
+  m_LocalPosition: {x: 100, y: -10, z: 0}
+  m_LocalScale: {x: 400, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -353,6 +363,7 @@ GameObject:
   - component: {fileID: 792234108}
   - component: {fileID: 792234107}
   - component: {fileID: 792234106}
+  - component: {fileID: 792234109}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -425,11 +436,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1076981208 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2788938908799223873, guid: fc6d4d2acd4882b48b21d54370bc6458, type: 3}
-  m_PrefabInstance: {fileID: 8295705959511793171}
+--- !u!114 &792234109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792234105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291c036d79e1f9d4f8b3e827dbf9711e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  easing: 0.25
+  _____________________________: 0
+  poi: {fileID: 0}
+  camZ: 0
 --- !u!1 &1235587313
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +498,7 @@ Transform:
   - {fileID: 218953315}
   - {fileID: 1406528781}
   - {fileID: 205859666}
+  - {fileID: 92683368}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
@@ -491,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c57b711726effa4dbf5667b15d97187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabProjectile: {fileID: 1076981208}
+  prefabProjectile: {fileID: 92683363}
   velocityMult: 10
   _____________________________: 0
   launchPoint: {fileID: 0}
@@ -753,12 +776,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &8295705959511793171
+--- !u!1001 &1741882765
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1235587315}
     m_Modifications:
     - target: {fileID: 2788938908799223873, guid: fc6d4d2acd4882b48b21d54370bc6458, type: 3}
       propertyPath: m_Name
@@ -808,5 +831,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7108837051741327396, guid: fc6d4d2acd4882b48b21d54370bc6458, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: d4ff78e9eead6c54ba91db5060e98db1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc6d4d2acd4882b48b21d54370bc6458, type: 3}
