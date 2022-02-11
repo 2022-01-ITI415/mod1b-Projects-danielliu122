@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileLine : MonoBehaviour
 {
-    static public ProjectileLine S; // Singleton
+    static public ProjectileLine PL; // Singleton
     // fields set in the Unity Inspector pane
     public float minDist = 0.1f;
     public bool _____________________________;
@@ -13,7 +13,7 @@ public class ProjectileLine : MonoBehaviour
     private GameObject _poi;
     public List<Vector3> points;
     void Awake() {
-        S = this; // Set the singleton
+        PL = this; // Set the singleton
         // Get a reference to the LineRenderer
         line = GetComponent<LineRenderer>();
         // Disable the LineRenderer until it's needed

@@ -8,6 +8,7 @@ public enum GameMode {
     playing,
     levelEnd
 }
+
 public class MissionDemolition : MonoBehaviour
 {
     static public MissionDemolition S; // a Singleton
@@ -44,9 +45,12 @@ public class MissionDemolition : MonoBehaviour
     castle = Instantiate( castles[level] ) as GameObject;
     castle.transform.position = castlePos;
     shotsTaken = 0;
+
     // Reset the camera
     SwitchView("Both");
-    ProjectileLine.S.Clear();
+    Destroy(ProjectileLine.PL);
+    //ProjectileLine.S.clear();
+
     // Reset the goal
     Goal.goalMet = false;
     ShowGT();
