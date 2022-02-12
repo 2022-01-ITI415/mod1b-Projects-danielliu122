@@ -15,6 +15,8 @@ public class FollowCam : MonoBehaviour
     public GameObject poi; // The point of interest
     public float camZ; // The desired Z pos of the camera
 
+    public Rigidbody rb2;
+
     void Awake() {
         S = this;
         camZ = this.transform.position.z;
@@ -31,12 +33,15 @@ public class FollowCam : MonoBehaviour
 
             // If poi is a Projectile, check to see if it's at rest
             if (poi.tag == "Projectile") {
+                rb2 = poi.GetComponent<Rigidbody>();
+                float vel = rb2.velocity.x;
                 // if it is sleeping (that is, not moving)
-                if ( poi.GetComponent<Rigidbody>().IsSleeping() ) {
-                // return to default view
+                if ( poi.GetComponent<Rigidbody>().IsSleeping() || (vel>0 && vel<0.001)  ) {
+                    // return to default view
                     poi = null;
                     // in the next update
                     return;
+
                 }
             }
         }

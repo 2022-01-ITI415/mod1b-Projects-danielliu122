@@ -12,6 +12,9 @@ public class ProjectileLine : MonoBehaviour
     public LineRenderer line;
     private GameObject _poi;
     public List<Vector3> points;
+
+        public Rigidbody rb2;
+
     void Awake() {
         PL = this; // Set the singleton
         // Get a reference to the LineRenderer
@@ -91,9 +94,14 @@ public class ProjectileLine : MonoBehaviour
         }
         // If there is a poi, it's loc is added every FixedUpdate
         AddPoint();
-        if ( poi.GetComponent<Rigidbody>().IsSleeping() ) {
+
+         rb2 = poi.GetComponent<Rigidbody>();
+        float vel = rb2.velocity.x;
+
+        if ( poi.GetComponent<Rigidbody>().IsSleeping() || (vel>0 && vel<0.001 )) {
             // Once the poi is sleeping, it is cleared
             poi = null;
+            line.SetVertexCount(0);
         }
     }
 // lAst

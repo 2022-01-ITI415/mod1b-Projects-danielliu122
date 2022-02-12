@@ -48,7 +48,9 @@ public class MissionDemolition : MonoBehaviour
 
     // Reset the camera
     SwitchView("Both");
-    Destroy(ProjectileLine.PL);
+    
+    ProjectileLine.PL.line.SetVertexCount(0);
+    // Destroy(ProjectileLine.PL);
     //ProjectileLine.S.clear();
 
     // Reset the goal
