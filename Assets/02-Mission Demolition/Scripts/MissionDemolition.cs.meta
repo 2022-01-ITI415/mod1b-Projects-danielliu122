@@ -3,10 +3,7 @@ guid: 065962d8d9dca3d46be4796c2a77835d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - gtLevel: {fileID: 4648854553243926503, guid: f95a2d81ebd76f14eb9a1b3c4dab24ae, type: 3}
-  - gtScore: {fileID: 2262985927375375509, guid: 813ebc7564179de489dd89970f140cfb, type: 3}
-  - castle: {fileID: 3404519383788005374, guid: 31fc62cc5801fb446bf0064d72f9ddf3, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
