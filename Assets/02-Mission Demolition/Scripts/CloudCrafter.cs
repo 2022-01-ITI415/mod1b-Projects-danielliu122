@@ -5,12 +5,12 @@ using UnityEngine;
 public class CloudCrafter : MonoBehaviour
 {
 	[Header("Set in Inspector")]
-	public int 	numClouds = 40; // the number of clouds to make
+	public int 	numClouds = 5; // the number of clouds to make
 	public GameObject 	cloudPrefab; // the prefab for the clouds
-	public Vector3 	cloudPosMin = new Vector3(-50, -5, 10);
-	public Vector3 	cloudPosMax = new Vector3(150, 100, 10);
+	public Vector3 	cloudPosMin = new Vector3(-50, -10, 10);
+	public Vector3 	cloudPosMax = new Vector3(50, 20, 10);
 	public float 	cloudScaleMin = 1; // min scale for the clouds
-	public float 	cloudScaleMax = 3; // max scale for the clouds
+	public float 	cloudScaleMax = 1.1f; // max scale for the clouds
 	public float 	cloudSpeedMult = 0.5f; // adjusts speed of clouds
 
 	private GameObject[] 	cloudInstances;
@@ -33,17 +33,17 @@ public class CloudCrafter : MonoBehaviour
 			cPos.x = Random.Range(cloudPosMin.x, cloudPosMax.x);
 			cPos.y = Random.Range(cloudPosMin.y, cloudPosMax.y);
 
-			// scale cloud
-			float scaleU = Random.value;
+			//scale cloud
+			float scaleU = 1.1f;
 			float scaleVal = Mathf.Lerp(cloudScaleMin, cloudScaleMax, scaleU);
 
-			// smaller clouds (with smaller scaleU) should be near the ground
+			//smaller clouds (with smaller scaleU) should be near the ground
 			cPos.y = Mathf.Lerp(cloudPosMin.y, cPos.y, scaleU);
 
-			// smaller clouds should be farther away
+			//smaller clouds should be farther away
 			cPos.z = 100 -90*scaleU;
 
-			// apply these transforms to the cloud 
+			//apply these transforms to the cloud 
 			cloud.transform.position = cPos;
 			cloud.transform.localScale = Vector3.one * scaleVal;
 
